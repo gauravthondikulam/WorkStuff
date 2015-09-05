@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src = "app.js"></script>
+</head>
+
+<body>
+
+	<div ng-app="testApp" ng-controller  = "myCtrl", >
+		<input type="checkbox" ng-model="mySwitch"/>Button
+		
+		My first string is {{string}}
+		<ul ng-repeat= "person in phamFam", ng-show="mySwitch">
+			<li>
+				<b>{{person.first}}</b>  {{person.last}} !!
+			</li>
+		 </ul>
+
+		 <table ng-hide="mySwitch">
+		 	<tr>
+		 		<td>First</td>
+		 		<td>Last</td>
+		 	</tr>
+		 	<tr ng-repeat= "person in phamFam">
+		 		<td>{{person.first}}</td>
+		 		<td>{{person.last}}</td>
+		 	</tr>
+		 </table>
+	</div>
+
+	</body>
